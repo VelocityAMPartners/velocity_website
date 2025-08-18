@@ -99,7 +99,7 @@
         .typewriter {
             font-size: 1.2rem;
             margin-bottom: 3rem;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.8;
@@ -115,7 +115,7 @@
 
         .typewriter-cursor {
             font-weight: 100;
-            font-size: 1.5rem;
+            font-size: 0rem;
             color: #60a5fa;
             animation: blink 1s infinite;
         }
@@ -127,7 +127,7 @@
 
         /* Shiny Text Effect */
         .shiny-text {
-            color: #b5b5b5a4;
+            color: #b5b5b5a4; /* Adjust this color to change intensity/style */
             background: linear-gradient(
                 120deg,
                 rgba(255, 255, 255, 0) 40%,
@@ -138,16 +138,20 @@
             -webkit-background-clip: text;
             background-clip: text;
             display: inline-block;
-            animation: shine 2s ease-in-out infinite;
+            animation: shine 5s linear infinite;
         }
 
         @keyframes shine {
             0% {
-                background-position: -100% 0;
+                background-position: 100%;
             }
             100% {
-                background-position: 200% 0;
+                background-position: -100%;
             }
+        }
+
+        .shiny-text.disabled {
+            animation: none;
         }
 
         /* Hero Section */
@@ -471,7 +475,6 @@
         <nav class="container">
             <a href="#" class="logo">
                 <img src="velocityamp-logo.png" alt="Velocity AMP Logo">
-                Velocity AM Partners
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -498,37 +501,37 @@
 
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title shiny-text">Our Services</h2>
+            <h2 class="animated-gradient-text">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🤖</div>
                     <h3>AI Integration</h3>
-                    <p>Custom LLM-powered solutions that integrate seamlessly with your existing software stack, making your team more efficient and accurate.</p>
+                    <p>Your team makes faster, smarter decisions when AI handles the grunt work. Eliminate research time, reduce errors, and watch productivity soar as intelligent automation does the heavy lifting.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
                     <h3>Process Automation</h3>
-                    <p>Bespoke Python executables that eliminate repetitive tasks and connect your data, ERPs, and software for streamlined workflows.</p>
+                    <p>Say goodbye to repetitive tasks that drain your team's energy. Your employees focus on high-value work while automated systems handle data entry, file transfers, and routine processes.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>Data Integration</h3>
-                    <p>Help your team become more integrated with their data through intelligent dashboards and automated reporting systems.</p>
+                    <p>Your data becomes your competitive advantage with real-time insights at your fingertips. Make informed decisions instantly instead of waiting days for reports that are already outdated.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎯</div>
                     <h3>Workflow Optimization</h3>
-                    <p>Identify efficiency gaps (like employees not using copy/paste) and create solutions that boost productivity across skill levels.</p>
+                    <p>Unlock hidden productivity in your current team. We find the bottlenecks costing you hours daily and eliminate them, turning your average performers into efficiency champions.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🚀</div>
                     <h3>Custom Development</h3>
-                    <p>Prompt engineering and Python scripting to create intelligent assistants tailored to your specific business processes.</p>
+                    <p>Get intelligent assistants that know your business inside and out. Your specific processes become automated workflows that work exactly how your company operates.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📈</div>
                     <h3>Training & Support</h3>
-                    <p>Comprehensive training programs to help your team adopt new tools and maximize their productivity potential.</p>
+                    <p>Your team confidently adopts new productivity tools without the usual resistance or learning curve. Full adoption means full ROI on every efficiency improvement.</p>
                 </div>
             </div>
             
@@ -542,12 +545,14 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="shiny-text">About Velocity AMP</h2>
-                    <p>At Velocity Automation and Management Partners, we specialize in full AI integration for building customized executable solutions that transform how businesses operate. We work exclusively with medium to small businesses, helping diverse teams maximize their potential regardless of current skill levels.</p>
+                    <h2 class="animated-gradient-text">About Velocity AMP</h2>
+                    <p>Your business will operate faster, smarter, and more profitably when your existing software actually works for your team instead of against them. Every employee - from your most tech-savvy to those still learning the basics - will complete their work in half the time with zero errors.</p>
                     
-                    <p>Our approach goes far beyond basic automation. We create intelligent systems that learn your business processes and adapt to your team's unique workflow patterns. Whether your employees are power users or someone who hasn't discovered fundamental processes yet, we build solutions that meet everyone where they are and elevate their capabilities exponentially.</p>
+                    <p>You'll watch your current team handle twice the workload without breaking a sweat. No more bottlenecks. No more costly mistakes. No more watching talented people waste hours on tasks that should take minutes.</p>
                     
-                    <p>Through advanced Python scripting, LLM integration, and custom AI development, we don't just improve processes—we completely reimagine how work gets done. The result? Your existing team becomes dramatically more productive, often eliminating the need for additional hires while improving job satisfaction and reducing errors.</p>
+                    <p>The software you're already paying for becomes your secret weapon. Your team stops fighting with technology and starts leveraging it. Projects that used to take weeks now finish in days. Your employees actually enjoy their work again because the frustrating parts disappear.</p>
+
+                    <p>Most importantly? You'll scale your revenue without scaling your payroll. While your competitors hire more people to handle growth, your existing team effortlessly manages increased demand. Your profit margins expand because productivity soars while costs stay flat.</p>
                     
                     <div class="about-images">
                         <img src="python-code.jpg" alt="Python Code Development">
@@ -624,7 +629,7 @@
 
     <script>
         // Typewriter effect - single run only
-        const texts = ["We take the software your company already uses and help individual contributors use it in more efficient and productive ways. By increasing individual productivity, we help your business do more with fewer resources."];
+        const texts = ["Stop watching your team struggle with software that should make them faster. We'll transform your existing tools into productivity powerhouses that save hours every day. Your employees will work smarter, not harder - completing tasks in minutes that used to take hours, while eliminating the frustration and errors that slow everyone down."];
         let textIndex = 0;
         let charIndex = 0;
         let hasCompleted = false;
